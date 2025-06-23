@@ -116,7 +116,7 @@ ticket_medio_geral = total_vendas / total_pedidos
 st.set_page_config(
     page_title="Customer Insights - Northwind",  
     page_icon="🎲", 
-    layout="wide"
+    layout="centered"
 )
 
 st.title("📊 Análise de Clientes e Risco de Churn - RFM com Northwind Database")
