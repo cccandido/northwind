@@ -84,8 +84,10 @@ Este projeto está disponível publicamente via **Streamlit Cloud**:
 
 ## 👩‍💻 Sobre mim
 
-Sou uma entusiasta de Ciência de Dados em processo de transição de carreira. Este é um dos projetos que refletem meu aprendizado e desenvolvimento técnico.
+ **Analista de Dados** com objetivo e foco crescente em projetos de **Ciência de Dados aplicada a Negócios**.
 
-**Vamos nos conectar!**
+Este projeto faz parte do meu portfólio prático, refletindo não apenas o aprendizado técnico, mas também minha capacidade de entender o problema de negócio, estruturar análises e entregar insights de valor.
 
-[LinkedIn - Camila Candido](https://www.linkedin.com/in/seu_linkedin/)
+**Acesse meu linkedin!**
+
+[LinkedIn - Camila Candido](https://www.linkedin.com/in/camila-scandido/)
