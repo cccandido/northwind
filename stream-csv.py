@@ -113,6 +113,12 @@ ticket_medio_geral = total_vendas / total_pedidos
 # Estrutura com Abas
 # --------------------------
 
+st.set_page_config(
+    page_title="Customer Insights - Northwind",  
+    page_icon="🎲", 
+    layout="wide"
+)
+
 st.title("📊 Análise de Clientes e Risco de Churn - RFM com Northwind Database")
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
