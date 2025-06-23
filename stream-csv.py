@@ -410,8 +410,9 @@ with tab5:
     plt.ylabel('Valor Total Gasto (R$)')
     plt.legend(title='Status do Cliente')
     st.pyplot(fig)
+    
       
-
+    st.markdown("---")
     st.markdown("""
     > **Observações da Análise Exploratória:**
     
@@ -420,7 +421,9 @@ with tab5:
     - **Presença de Outliers:** Durante a análise, foram identificados alguns clientes com **valores muito acima da média**, tanto em gasto quanto em frequência de pedidos.  
     Por se tratarem de comportamentos legítimos de clientes de alto valor, **optamos por não remover esses outliers**, preservando a representatividade dos dados reais.
     
-    - **Correlação:** Não foi observada correlação forte entre as variáveis RFM, mas a dispersão visual ajuda a entender melhor os diferentes perfis de cliente.
+    - **Correlação:** Foi identificada uma **forte correlação positiva entre a Frequência de Pedidos e o Valor Total Gasto**, o que era esperado, pois clientes que compram mais tendem a gastar mais ao longo do tempo.
+    Por outro lado, a variável **Recência** não apresentou correlação significativa com as demais, o que é natural no contexto de RFM, já que ela mede um aspecto temporal diferente (tempo desde a última compra).
+    Essa análise reforça a importância de tratar as dimensões R, F e M de forma combinada, mas entendendo suas naturezas distintas.
     """, unsafe_allow_html=True)
 
 
@@ -434,38 +437,42 @@ with tab6:
     st.markdown("""
     ### ✅ Principais Conclusões:
 
-    - **Clientes Ativos** demonstram maior frequência de compra e maior valor de gasto médio por pedido.
-    - **Clientes em Risco de Churn** já apresentam sinais claros de queda no engajamento, com menor frequência e menor ticket médio.
-    - **Clientes Inativos** ainda mantêm um gasto acumulado relativamente alto, sugerindo que muitos deles já foram clientes valiosos no passado.
-    - A análise exploratória identificou **clusters visuais distintos no comportamento dos clientes**, reforçando a segmentação feita.
-    - Foram encontrados **outliers de clientes com gastos muito altos**, mas optamos por mantê-los na base para preservar a realidade dos dados.
+    - **Clientes Ativos** são o grupo mais engajado, com **maior frequência de compras**, **maior ticket médio** e **maior gasto acumulado**.
 
+    - **Clientes em Risco de Churn** demonstram os **piores desempenhos em todos os KPIs**, com **baixa frequência**, **baixo gasto total** e **menor ticket médio**, o que reforça a urgência de ações de reengajamento.
+    
+    - **Clientes Inativos**, apesar do longo tempo sem compras, ainda apresentam **gasto acumulado** e **ticket médio** superiores ao grupo em risco, indicando um histórico de valor que pode ser explorado em campanhas de recuperação.
+    
+    - A **análise exploratória identificou clusters visuais distintos** no comportamento dos clientes, o que reforça a eficácia da segmentação via RFM.
+    
+    - Durante a análise, **outliers de clientes com gastos muito elevados foram identificados**, mas optamos por mantê-los na base para preservar a representatividade dos dados.
+    
+    - A análise de correlação mostrou uma **forte relação entre a Frequência de Pedidos e o Valor Total Gasto**, mas como esperado, a **Recência** teve comportamento independente das outras dimensões.
+    
     ---
 
     ### 🚀 Próximos Passos Recomendados:
 
     - **Implementar um Modelo Preditivo de Churn:**  
-    Para antecipar o risco de perda de clientes, com base nas variáveis RFM e possíveis outras variáveis comportamentais.
-
+    Para antecipar o risco de perda de clientes com base nas variáveis RFM e outros comportamentos históricos.
+    
     - **Desenvolver Campanhas de Retenção Personalizadas:**  
-    Criar ações de reengajamento focadas nos clientes em risco e inativos, com base nos insights obtidos.
-
+    Focar em ações específicas para **clientes em risco** e **inativos**, com base nos insights obtidos.
+    
     - **Monitoramento Contínuo:**  
-    Criar um processo automatizado de atualização da segmentação RFM e dos KPIs, para que a análise seja usada de forma recorrente pela área de negócios.
-
+    Criar um processo automatizado para **atualizar a segmentação RFM** e os **KPIs de forma periódica**, possibilitando uma análise dinâmica ao longo do tempo.
+    
     - **Evoluir o Dashboard:**  
-    Incorporar filtros interativos, análises temporais e outros indicadores avançados.
-
+    Incorporar **filtros interativos**, **análises temporais** e **novos indicadores de engajamento**.
+    
     ---
 
     ### 💡 Observação Final:
 
-    Este projeto foi desenvolvido com foco em aplicar conceitos fundamentais de **Ciência de Dados aplicada a Negócios**, envolvendo **SQL**, **Python (Pandas, Matplotlib, Seaborn)** e **Streamlit**.
+   Este projeto foi desenvolvido com foco em aplicar **conceitos fundamentais de Ciência de Dados aplicada a Negócios**, abrangendo **SQL**, **Python (Pandas, Matplotlib, Seaborn)** e **Streamlit**, com deploy final no **Streamlit Cloud**.
 
-    Todo o código, documentação e storytelling estão disponíveis no repositório deste projeto.
-
-    """)
-
+    Todo o **código-fonte**, **documentação**, **storytelling analítico** e **scripts SQL** estão disponíveis de forma aberta no [repositório GitHub deste projeto](https://github.com/cccandido/northwind).
+""")
 
 
 
