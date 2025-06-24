@@ -192,25 +192,25 @@ with tab2:
     # KPI 1 - Total de Clientes
     with col1:
         st.markdown("<h5 style='color:gray;'>Total de Clientes</h5>", unsafe_allow_html=True)
-        st.markdown(f"<h3 style='color:#ffffff;'>{total_clientes:,}".replace(",", "."), unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color:	#4F4F4F;'>{total_clientes:,}".replace(",", "."), unsafe_allow_html=True)
 
     # KPI 2 - Total de Vendas
     with col2:
         st.markdown("<h5 style='color:gray;'>Total de Vendas R$ </h5>", unsafe_allow_html=True)
-        st.markdown(f"<h3 style='color:#ffffff;'>R$ {int(total_vendas):,}".replace(",", ".") + "</h3>", unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color:#4F4F4F;'>R$ {int(total_vendas):,}".replace(",", ".") + "</h3>", unsafe_allow_html=True)
 
     # KPI 3 - Total de Pedidos
     with col3:
         st.markdown("<h5 style='color:gray;'>Total de Pedidos</h5>", unsafe_allow_html=True)
-        st.markdown(f"<h3 style='color:#ffffff;'>{total_pedidos:,}".replace(",", "."), unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color:#4F4F4F;'>{total_pedidos:,}".replace(",", "."), unsafe_allow_html=True)
 
     # KPI 4 - Ticket Médio Geral
     with col4:
         st.markdown("<h5 style='color:gray;'>Ticket Médio Geral</h5>", unsafe_allow_html=True)
-        st.markdown(f"<h3 style='color:#ffffff;'>R$ {ticket_medio_geral:,.2f}</h3>".replace(",", "X").replace(".", ",").replace("X", "."), unsafe_allow_html=True)
+        st.markdown(f"<h3 style='color:#4F4F4F;'>R$ {ticket_medio_geral:,.2f}</h3>".replace(",", "X").replace(".", ",").replace("X", "."), unsafe_allow_html=True)
 
     st.markdown("""
-    <p style='font-size:18px; color:#ffffff;'>
+    <p style='font-size:18px; color:#4F4F4F;'>
     Estes indicadores oferecem uma visão geral da base de clientes e do volume de vendas.
     O <strong>Ticket Médio Geral</strong> indica o valor médio de cada pedido realizado.
     </p>
@@ -261,7 +261,7 @@ with tab3:
     st.dataframe(count_status)
 
     st.markdown(f"""
-    <p style='font-size:18px; color:#ffffff;'>
+    <p style='font-size:18px; color:#4F4F4F;'>
     <strong>Insight:</strong> Atualmente, <strong>{percentual_inativos:.1f}%</strong> da base de clientes está inativa, e <strong>{percentual_risco:.1f}%</strong> corre risco de churn, totalizando <strong>{percentutal_perda_total:.1f}%</strong> de toda a base de clientes, representando um potencial impacto significativo de receita.
     </p>
     """, unsafe_allow_html=True)
